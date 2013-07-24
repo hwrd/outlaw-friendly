@@ -105,6 +105,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    geocoder (1.1.8)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -194,6 +195,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise!
   formtastic!
+  geocoder
   inherited_resources!
   jbuilder (~> 1.2)
   jquery-rails
