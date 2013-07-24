@@ -1,4 +1,10 @@
 ActiveAdmin.register AdminUser do
+  controller do
+    def permitted_params
+      params.permit admin_user: [:email, :password, :password_confirmation]
+    end
+  end
+  
   index do
     column :email
     column :current_sign_in_at
