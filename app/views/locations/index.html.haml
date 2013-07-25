@@ -4,15 +4,15 @@
     New Location
   %h1 Listing locations
 
+= render 'search'
+
 %table.table.table-bordered.table-striped
   %thead
     %tr
       %th Name
       %th Address
       %th Website
-      %th More
-      %th Latitude
-      %th Longitude
+      %th Distance
       %th
       %th
       %th
@@ -23,9 +23,7 @@
         %td= location.name
         %td= location.address
         %td= location.website
-        %td= location.more
-        %td= location.latitude
-        %td= location.longitude
+        %td= location.distance if params[:search]
         %td= link_to 'Show', location
         %td= link_to 'Edit', edit_location_path(location)
         %td= link_to 'Destroy', location, :data => { confirm: 'Are you sure?' }, :method => :delete
