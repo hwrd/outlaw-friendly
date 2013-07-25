@@ -35,7 +35,7 @@ end
 
 gem 'geocoder'
 gem 'bootstrap-generators', github: 'decioferreira/bootstrap-generators'
-gem 'simple_form'
+gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'haml-rails'
 
 group :production do

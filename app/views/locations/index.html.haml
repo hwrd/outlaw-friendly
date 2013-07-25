@@ -1,0 +1,31 @@
+.page-header
+  = link_to new_location_path, :class => 'btn btn-primary' do
+    %i.icon-plus.icon-white
+    New Location
+  %h1 Listing locations
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th Website
+      %th More
+      %th Latitude
+      %th Longitude
+      %th
+      %th
+      %th
+
+  %tbody
+    - @locations.each do |location|
+      %tr
+        %td= location.name
+        %td= location.address
+        %td= location.website
+        %td= location.more
+        %td= location.latitude
+        %td= location.longitude
+        %td= link_to 'Show', location
+        %td= link_to 'Edit', edit_location_path(location)
+        %td= link_to 'Destroy', location, :data => { confirm: 'Are you sure?' }, :method => :delete

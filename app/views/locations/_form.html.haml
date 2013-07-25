@@ -1,0 +1,13 @@
+= simple_form_for(@location, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :address
+    = f.input :website
+    = f.input :more
+    = f.input :latitude
+    = f.input :longitude
+
+  .form-actions
+    = f.button :submit, :class => "btn-primary"
