@@ -1,6 +1,8 @@
 .page-header
   %h1 Locations
 
+#map.well{data: {locations: @locations.to_json, center: params[:search]}}
+
 %table.table.table-bordered.table-striped
   %thead
     %tr
