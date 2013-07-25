@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    %title Bootstrap, from Twitter
+    %title Outlaw Friendly | Carpe Ferrum
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
@@ -21,7 +21,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "Project name", "#", :class => "brand"
+          = link_to "Outlaw Friendly", root_url, :class => "brand"
           .nav-collapse
             %ul.nav
               %li.active
@@ -30,6 +30,7 @@
                 %a{:href => "#about"} About
               %li
                 %a{:href => "#contact"} Contact
+          = render 'search'
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
