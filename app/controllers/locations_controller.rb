@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  http_basic_authenticate_with name: "carpeferrum", password: "fuckburpees", except: :index
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   # GET /locations
