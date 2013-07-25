@@ -2,7 +2,7 @@
   = link_to new_location_path, :class => 'btn btn-primary' do
     %i.icon-plus.icon-white
     New Location
-  %h1 Listing locations
+  %h1 Locations
 
 %table.table.table-bordered.table-striped
   %thead
@@ -10,10 +10,6 @@
       %th Name
       %th Address
       %th Website
-      %th Distance
-      %th
-      %th
-      %th
 
   %tbody
     - @locations.each do |location|
@@ -21,7 +17,3 @@
         %td= location.name
         %td= location.address
         %td= location.website
-        %td= location.distance if params[:search]
-        %td= link_to 'Show', location
-        %td= link_to 'Edit', edit_location_path(location)
-        %td= link_to 'Destroy', location, :data => { confirm: 'Are you sure?' }, :method => :delete

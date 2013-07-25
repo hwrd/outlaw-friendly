@@ -14,22 +14,10 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-fixed-top
+    .navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
         .container
-          %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"} }
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           = link_to "Outlaw Friendly", root_url, :class => "brand"
-          .nav-collapse
-            %ul.nav
-              %li.active
-                %a{:href => "#"} Home
-              %li
-                %a{:href => "#about"} About
-              %li
-                %a{:href => "#contact"} Contact
           = render 'search'
     .container
       - flash.each do |name, msg|
@@ -37,6 +25,7 @@
           %a.close{:href => "#", :data => {:dismiss => "alert"} } ×
           = msg
       = yield
-      %hr
       %footer
-        %p &copy; Company 2012
+        %p
+          Powered by
+          = link_to "Carpe Ferrum", "http://www.carpeferrum.com"
