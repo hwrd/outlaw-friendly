@@ -1,6 +1,5 @@
 OutlawFriendly::Application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
   resources :locations
 
   # The priority is based upon order of creation: first created -> highest priority.
