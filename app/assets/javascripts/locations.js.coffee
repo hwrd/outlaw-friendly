@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+load_map = ->
   center = $("#map").data('center') || "United States"
 
   geocoder = new google.maps.Geocoder();
@@ -14,8 +14,6 @@ $ ->
       ne = bounds.getNorthEast()
       sw = bounds.getSouthWest()
       data = { sw: [sw.lat(), sw.lng()], ne: [ne.lat(), ne.lng()]}
-
-
 
     opts = {
       zoom: 4,
@@ -44,3 +42,6 @@ $ ->
 
       google.maps.event.addListener marker, 'click', ->
         infowindow.open map, marker
+
+$(document).ready(load_map)
+$(document).on('page:load', load_map)
