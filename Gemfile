@@ -39,6 +39,7 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'haml-rails'
 
 group :production do
+  gem 'unicorn'
   gem 'rails_12factor'
 end
 
