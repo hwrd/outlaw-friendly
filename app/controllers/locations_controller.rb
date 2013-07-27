@@ -8,7 +8,7 @@ class LocationsController < ApplicationController
     if params[:search].present?
       @locations = Location.near(params[:search], 50)
     else
-      @locations = Location.all
+      @locations = Location.order(:name)
     end
   end
 
