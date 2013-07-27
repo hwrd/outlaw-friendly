@@ -30,3 +30,4 @@
         %p
           Powered by
           = link_to "Carpe Ferrum", "http://www.carpeferrum.com"
+        = render partial: 'layouts/ga' if Rails.env.production?
