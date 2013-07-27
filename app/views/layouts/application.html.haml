@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    %title Outlaw Friendly | Carpe Ferrum
+    %title Outlaw Friendly Gyms | Carpe Ferrum
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
@@ -18,9 +18,11 @@
     .navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
         .container
-          = link_to "Outlaw Friendly", root_url, :class => "brand"
           = render 'search'
     .container
+      .page-header
+        = link_to image_tag("header.png"), root_url
+
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
           %a.close{:href => "#", :data => {:dismiss => "alert"} } ×
