@@ -5,11 +5,9 @@
     %tr
       %th Name
       %th Address
-      %th Website
 
   %tbody
     - @locations.each do |location|
       %tr
-        %td= location.name
+        %td= link_to location.name, location.website
         %td= location.address
-        %td= location.website
