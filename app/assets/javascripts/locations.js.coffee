@@ -44,4 +44,3 @@ load_map = ->
         infowindow.open map, marker
 
 $(document).ready(load_map)
-$(document).on('page:load', load_map)
