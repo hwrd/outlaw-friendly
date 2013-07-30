@@ -33,6 +33,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'newrelic_rpm'
 gem 'geocoder'
 gem 'bootstrap-generators', github: 'decioferreira/bootstrap-generators'
 gem 'simple_form', github: 'plataformatec/simple_form'
