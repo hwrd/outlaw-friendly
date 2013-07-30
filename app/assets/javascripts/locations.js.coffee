@@ -37,7 +37,7 @@ load_map = ->
       }
 
       infowindow = new google.maps.InfoWindow {
-        content: "<h5>" + location.name + "</h5>" + location.address + "<br><a href=\"" + location.website + "\">" + location.website + "</a>"
+        content: "<h5>" + location.name + "</h5>" + location.address + "<br><a href=\"" + location.website + "\">" + location.website + "</a><br><p>" + location.more + "</p>"
       }
 
       google.maps.event.addListener marker, 'click', ->
