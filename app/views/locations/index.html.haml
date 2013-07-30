@@ -9,5 +9,5 @@
   %tbody
     - @locations.each do |location|
       %tr
-        %td= link_to location.name, location.website
+        %td= link_to_if location.website?, location.name, location.website
         %td= location.address
