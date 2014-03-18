@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -38,6 +38,8 @@ gem 'geocoder'
 gem 'bootstrap-generators', github: 'decioferreira/bootstrap-generators'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'haml-rails'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :production do
   gem 'unicorn'
