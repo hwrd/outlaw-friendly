@@ -38,6 +38,7 @@ gem 'geocoder'
 gem 'bootstrap-generators', github: 'decioferreira/bootstrap-generators'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'haml-rails'
+gem 'ahoy_matey'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
